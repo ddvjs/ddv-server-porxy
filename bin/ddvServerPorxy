@@ -1,0 +1,60 @@
+#!/usr/bin/env node
+'use strict'
+// 标题
+process.title = 'ddvServerPorxy'
+
+// 默认
+let defaultCommand = 'dev'
+let commands = [
+  defaultCommand,
+  'init',
+  'build',
+  'start',
+  'generate'
+]
+
+let cmd = process.argv[2]
+if (!cmd) {
+  cmd = defaultCommand
+}
+if (commands.indexOf(cmd) < 0) {
+  console.error('This command is not supported')
+  process.exit(1)
+}
+let DEBUG = process.env.NODE_ENV === 'development' || false
+switch (cmd) {
+  case 'init':
+    break
+  case 'build':
+    // 非调试模式
+    DEBUG = false
+    break
+  case 'start':
+    // 非调试模式
+    DEBUG = false
+    break
+  case 'generate':
+    // 非调试模式
+    DEBUG = false
+    break
+  // case 'dev':
+  default:
+    // 默认命令
+    cmd = 'dev'
+    // 调试模式
+    DEBUG = true
+    break
+}
+// 开始运行
+switch (cmd) {
+  case 'build':
+    console.log('开发中')
+    break
+  case 'start':
+  case 'dev':
+    // 修改环境变量
+    process.env.NODE_ENV = DEBUG ? 'development' : 'production'
+    // 调试模式
+    require('../lib/index.js')
+    break
+}
