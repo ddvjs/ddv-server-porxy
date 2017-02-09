@@ -1,0 +1,49 @@
+{
+  "scripts": {
+    "lint": "eslint --ext .js lib",
+    "test": "npm run lint",
+    "precommit": "npm run lint",
+    "prepublish": "npm run lint"
+  },
+  "author": {
+    "name": "yuchonghua"
+  },
+  "keywords": [
+    "ddv-server-porxy"
+  ],
+  "license": "ISC",
+  "main": "./lib",
+  "maintainers": [
+    {
+      "name": "yuchonghua",
+      "email": "yuchonghua@163.com"
+    }
+  ],
+  "name": "ddv-server-porxy",
+  "bugs": {
+    "url": "https://github.com/ddvjs/ddv-server-porxy/issues"
+  },
+  "homepage": "https://github.com/ddvjs/ddv-server-porxy#readme",
+  "description": "ddv-server-porxy",
+  "directories": {},
+  "dependencies": {
+    "ddv-worker": "~0.0.18"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.0.1",
+    "eslint": "^3.14.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1"
+  },
+  "optionalDependencies": {},
+  "preferGlobal": true,
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ddvjs/ddv-server-porxy.git"
+  },
+  "jshintConfig": {
+    "esversion": 6
+  },
+  "version": "0.0.1"
+}
