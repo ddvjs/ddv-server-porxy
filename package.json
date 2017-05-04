@@ -30,7 +30,7 @@
   "description": "ddv-server-porxy",
   "directories": {},
   "dependencies": {
-    "ddv-worker": "~0.0.18"
+    "ddv-worker": "0.0.21"
   },
   "devDependencies": {
     "babel-eslint": "^7.0.1",
